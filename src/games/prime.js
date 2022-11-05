@@ -9,7 +9,7 @@ function mainPrime() {
   const number = getRandomInt();
   let answer = '';
   for (let i = 2; i <= Math.sqrt(number); i += 1) {
-    if (number % 2 === 0) {
+    if (number % i === 0) {
       answer = 'no';
     }
   }
