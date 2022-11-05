@@ -22,11 +22,13 @@ function mainProgression() {
   let currentNumberOfProgression = firstNumberOfProgression;
   for (let i = 1; i < 10; i += 1) {
     if (i !== position) {
-      question += `${currentNumberOfProgression * denominator} `;
+      let currentNumber = currentNumberOfProgression * denominator;
+      question = `${currentNumber}`;
       currentNumberOfProgression *= denominator;
     } else {
       question += '.. ';
-      answer = `${currentNumberOfProgression * denominator}`;
+      let currentNumber = currentNumberOfProgression * denominator;
+      answer = `${currentNumber}`;
       currentNumberOfProgression *= denominator;
     }
   }
