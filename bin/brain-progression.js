@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env nodelk
 import resProgression from '../src/games/progression.js';
 
 resProgression();

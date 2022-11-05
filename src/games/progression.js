@@ -6,11 +6,11 @@ function getRandomPosition() {
 }
 
 function getRandomInt() {
-  return Math.floor(Math.random() * 15);
+  return Math.floor(Math.random() * 30);
 }
 
 function getRandomQ() {
-  return Math.floor(Math.random() * 2);
+  return Math.floor(Math.random() * 5);
 }
 
 function mainProgression() {
@@ -22,14 +22,14 @@ function mainProgression() {
   let currentNumberOfProgression = firstNumberOfProgression;
   for (let i = 1; i < 10; i += 1) {
     if (i !== position) {
-      let currentNumber = currentNumberOfProgression * denominator;
-      question = `${currentNumber}`;
-      currentNumberOfProgression *= denominator;
+      let currentNumber = currentNumberOfProgression + denominator;
+      question += `${currentNumber} `;
+      currentNumberOfProgression += denominator;
     } else {
       question += '.. ';
-      let currentNumber = currentNumberOfProgression * denominator;
+      let currentNumber = currentNumberOfProgression + denominator;
       answer = `${currentNumber}`;
-      currentNumberOfProgression *= denominator;
+      currentNumberOfProgression += denominator;
     }
   }
   return [question, answer];
