@@ -17,19 +17,17 @@ function mainProgression() {
   const position = getRandomPosition();
   const firstNumberOfProgression = getRandomInt() + 1;
   const denominator = getRandomQ() + 1;
-  let answer = '';
-  let question = `${firstNumberOfProgression} `;
+  const rightAnswer =  firstNumberOfProgression + denominator * position;
+  const answer = `${rightAnswer}`;
+  let question = ``;
   let currentNumberOfProgression = firstNumberOfProgression;
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 0; i < 10; i += 1) {
     if (i !== position) {
-      let currentNumber = currentNumberOfProgression + denominator;
-      question += `${currentNumber} `;
-      currentNumberOfProgression += denominator;
+      question += `${currentNumberOfProgression} `;
+      currentNumberOfProgression = currentNumberOfProgression + denominator;
     } else {
       question += '.. ';
-      let currentNumber = currentNumberOfProgression + denominator;
-      answer = `${currentNumber}`;
-      currentNumberOfProgression += denominator;
+      currentNumberOfProgression = currentNumberOfProgression + denominator;
     }
   }
   return [question, answer];
